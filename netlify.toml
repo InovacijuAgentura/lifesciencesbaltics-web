@@ -1,0 +1,12 @@
+[build]
+  publish = "dist/"
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+  [plugins.inputs]
+  baseUrl = "http://localhost:3333"
+  trailingSlash = true
+  exclude = [
+  	'./404',
+  	'./404/',
+  	'./dist/404.html'
+  ]

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "index___en",
+    "path": "/",
+    "component": "/Users/ignas/Sites/lsb/lsb/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_062e82f2"
+  },
+  {
+    "name": "new-slug___en",
+    "path": "/new/:slug?",
+    "component": "/Users/ignas/Sites/lsb/lsb/pages/new/_slug.vue",
+    "chunkName": "pages/new/_slug",
+    "_name": "_22caad10"
+  },
+  {
+    "name": "team-member-slug___en",
+    "path": "/team-member/:slug?",
+    "component": "/Users/ignas/Sites/lsb/lsb/pages/team-member/_slug.vue",
+    "chunkName": "pages/team-member/_slug",
+    "_name": "_15de59fa"
+  },
+  {
+    "name": "all___en",
+    "path": "/*",
+    "component": "/Users/ignas/Sites/lsb/lsb/pages/_.vue",
+    "chunkName": "pages/_",
+    "_name": "_59319e14"
+  }
+]
