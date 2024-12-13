@@ -13,13 +13,13 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_gtm_374840cd from 'nuxt_plugin_gtm_374840cd' // Source: ./gtm.js (mode: 'all')
-import nuxt_plugin_pluginutils_28982ae4 from 'nuxt_plugin_pluginutils_28982ae4' // Source: ./nuxt-i18n/plugin.utils.js (mode: 'all')
-import nuxt_plugin_pluginrouting_19398f2f from 'nuxt_plugin_pluginrouting_19398f2f' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
-import nuxt_plugin_pluginmain_845b7ac0 from 'nuxt_plugin_pluginmain_845b7ac0' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
-import nuxt_plugin_nuxtmq_a7beb102 from 'nuxt_plugin_nuxtmq_a7beb102' // Source: ./nuxt-mq.js (mode: 'all')
-import nuxt_plugin_axios_315e4f92 from 'nuxt_plugin_axios_315e4f92' // Source: ./axios.js (mode: 'all')
-import nuxt_plugin_image_5b50559c from 'nuxt_plugin_image_5b50559c' // Source: ./image.js (mode: 'all')
+import nuxt_plugin_gtm_6344159a from 'nuxt_plugin_gtm_6344159a' // Source: ./gtm.js (mode: 'all')
+import nuxt_plugin_pluginutils_6246fe12 from 'nuxt_plugin_pluginutils_6246fe12' // Source: ./nuxt-i18n/plugin.utils.js (mode: 'all')
+import nuxt_plugin_pluginrouting_3fc0ac82 from 'nuxt_plugin_pluginrouting_3fc0ac82' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
+import nuxt_plugin_pluginmain_691d43a6 from 'nuxt_plugin_pluginmain_691d43a6' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
+import nuxt_plugin_nuxtmq_195b4dcc from 'nuxt_plugin_nuxtmq_195b4dcc' // Source: ./nuxt-mq.js (mode: 'all')
+import nuxt_plugin_axios_03aaadc4 from 'nuxt_plugin_axios_03aaadc4' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_image_229caa82 from 'nuxt_plugin_image_229caa82' // Source: ./image.js (mode: 'all')
 import nuxt_plugin_previewclient_5fee6a20 from 'nuxt_plugin_previewclient_5fee6a20' // Source: ../plugins/preview.client.js (mode: 'client')
 import nuxt_plugin_vuelazysizesclient_c533fa02 from 'nuxt_plugin_vuelazysizesclient_c533fa02' // Source: ../plugins/vue-lazysizes.client.js (mode: 'client')
 import nuxt_plugin_vuefinalmodal_4feb7bbe from 'nuxt_plugin_vuefinalmodal_4feb7bbe' // Source: ../plugins/vue-final-modal.js (mode: 'all')
@@ -224,32 +224,32 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_gtm_374840cd === 'function') {
-    await nuxt_plugin_gtm_374840cd(app.context, inject)
+  if (typeof nuxt_plugin_gtm_6344159a === 'function') {
+    await nuxt_plugin_gtm_6344159a(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginutils_28982ae4 === 'function') {
-    await nuxt_plugin_pluginutils_28982ae4(app.context, inject)
+  if (typeof nuxt_plugin_pluginutils_6246fe12 === 'function') {
+    await nuxt_plugin_pluginutils_6246fe12(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginrouting_19398f2f === 'function') {
-    await nuxt_plugin_pluginrouting_19398f2f(app.context, inject)
+  if (typeof nuxt_plugin_pluginrouting_3fc0ac82 === 'function') {
+    await nuxt_plugin_pluginrouting_3fc0ac82(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginmain_845b7ac0 === 'function') {
-    await nuxt_plugin_pluginmain_845b7ac0(app.context, inject)
+  if (typeof nuxt_plugin_pluginmain_691d43a6 === 'function') {
+    await nuxt_plugin_pluginmain_691d43a6(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_nuxtmq_a7beb102 === 'function') {
-    await nuxt_plugin_nuxtmq_a7beb102(app.context, inject)
+  if (typeof nuxt_plugin_nuxtmq_195b4dcc === 'function') {
+    await nuxt_plugin_nuxtmq_195b4dcc(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_315e4f92 === 'function') {
-    await nuxt_plugin_axios_315e4f92(app.context, inject)
+  if (typeof nuxt_plugin_axios_03aaadc4 === 'function') {
+    await nuxt_plugin_axios_03aaadc4(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_image_5b50559c === 'function') {
-    await nuxt_plugin_image_5b50559c(app.context, inject)
+  if (typeof nuxt_plugin_image_229caa82 === 'function') {
+    await nuxt_plugin_image_229caa82(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_previewclient_5fee6a20 === 'function') {
