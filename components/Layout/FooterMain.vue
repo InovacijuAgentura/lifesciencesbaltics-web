@@ -18,9 +18,9 @@ div.footer(v-if="options && menu")
               Button(:to="options.general.footer_more_button.url" :href="options.general.footer_more_button.url" :text="options.general.footer_more_button.title" :target="options.general.footer_more_button.target")
     div.copy  
       div © {{year}} {{$t('copyright')}}
-        NuxtLinkOrA.link(v-if="options.general.privacy_policy_page"  v-bind:url="options.general.privacy_policy_page.url" :target="options.general.privacy_policy_page.target") {{options.general.privacy_policy_page.title}}
-        span(v-if="options.general.cookie_policy_page && options.general.privacy_policy_page") {{$t('and')}}
-        NuxtLinkOrA.link(v-if="options.general.cookie_policy_page"  v-bind:url="options.general.cookie_policy_page.url" :target="options.general.cookie_policy_page.target") {{options.general.cookie_policy_page.title}}
+        //- NuxtLinkOrA.link(v-if="options.general.privacy_policy_page"  v-bind:url="options.general.privacy_policy_page.url" :target="options.general.privacy_policy_page.target") {{options.general.privacy_policy_page.title}}
+        //- span(v-if="options.general.cookie_policy_page && options.general.privacy_policy_page") {{$t('and')}}
+        //- NuxtLinkOrA.link(v-if="options.general.cookie_policy_page"  v-bind:url="options.general.cookie_policy_page.url" :target="options.general.cookie_policy_page.target") {{options.general.cookie_policy_page.title}}
         div.small Touched by 
           a(href="https://digitouch.lt/" target="_BLANK") digitouch!
       SocialLinks(v-if="options.general.social_links" :links="options.general.social_links")
