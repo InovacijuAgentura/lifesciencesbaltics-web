@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "dev:test": "nuxt --dotenv .env.test",
     "build": "nuxt build",
+    "build:test": "nuxt build --dotenv .env.test",
+    "generate": "nuxt generate",
+    "generate:test": "nuxt generate --dotenv .env.test",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "start:test": "nuxt start --dotenv .env.test"
   },
   "dependencies": {
     "@netlify/plugin-sitemap": "^0.8.1",
