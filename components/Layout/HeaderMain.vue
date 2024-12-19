@@ -10,7 +10,7 @@ div.header(:class="[{min:min}, headerStyle]")
           ticket
       div.hamburger-container
         div.hamburgerc
-          button.hamburger.hamburger--collapse(@click="openHamburgerMenu" :class="{active:hamburgerOpen}")
+          .hamburger.hamburger--collapse(@click="openHamburgerMenu" :class="{active:hamburgerOpen}")
             div.inner
               span.bar
               span.bar
