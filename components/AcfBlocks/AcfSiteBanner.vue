@@ -19,9 +19,9 @@ div.banner(:class="[layout_color]")
           revealBlock(v-if="number_right" :delay="0.6") {{number_right}}
 
       .right(v-if="image || video_file")
-        wpImageFull(v-if="image && !use_video" :image="image" :cover="true" :width="1368")
+        wpImageFull(v-if="image && !use_video" :image="image" :cover="true" :width="1368" alt="Image")
         .video(v-else-if="video_file && use_video")
-          video(preload="metadata" width="100%" autoplay muted loop)
+          video(preload="metadata" autoplay muted loop)
             source(:src="video_file.url" :type="video_file.mime_type")
 </template>
 

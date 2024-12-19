@@ -7,7 +7,7 @@ div.gallery(:class="[padding_top, padding_bottom, layout_color]")
     .items(v-if="gallery && gallery.length && type === 'simple'")
       revealBlock(v-for="(item,index) in gallery" :key="index" :delay="index*0.1" )
         .img( @click="openGal(index)")
-          wpImageSmall(:image="item.image" :width="634" :height="412"  :cover="true")
+          wpImageSmall(:image="item.image" :width="634" :height="412"  :cover="true" alt="Image")
     div.swiper(v-else-if="gallery && gallery.length" ref="gallery")
       div.navigation
         div.prev(ref="prevgf")
@@ -18,7 +18,7 @@ div.gallery(:class="[padding_top, padding_bottom, layout_color]")
           slider_next
       div.swiper-wrapper
         .swiper-slide.item(v-for="(item, index) in gallery" :key="index" @click="openGal(index)")
-          wpImageSmall(:image="item.imagebig" :cover="true" :height="849" :width="1305")
+          wpImageSmall(:image="item.imagebig" :cover="true" :height="849" :width="1305" alt="Image")
 </template>
 
 <script>

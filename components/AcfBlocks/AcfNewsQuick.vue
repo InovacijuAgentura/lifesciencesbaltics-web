@@ -4,7 +4,7 @@ div.news(:class="[padding_top, padding_bottom, layout_color]")
     .grid(v-if="main_new")
       revealBlock.img(v-if="main_new.image" type="slidein")
         NuxtLink(:to="main_new.url").link
-        wpImageSmall(:image="main_new.image" :width="950" :cover="true")
+        wpImageSmall(:image="main_new.image" :width="950" :cover="true" alt="Image")
       revealBlock.info(type="slidein" :delay="0")
         .date {{main_new.date}}
         h2.title(v-html="main_new.title")

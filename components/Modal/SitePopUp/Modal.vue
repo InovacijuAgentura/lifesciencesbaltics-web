@@ -1,6 +1,6 @@
 <template lang="pug">
 div.modal
-    wpImageSmall(:image="data" :width="768" :contain="true")
+    wpImageSmall(:image="data" :width="768" :contain="true" alt="Image")
 
 </template>
 

@@ -1,5 +1,5 @@
 <template lang="pug">
-span(ref="title").reftitle
+div(ref="title").reftitle
     slot
 </template>
 

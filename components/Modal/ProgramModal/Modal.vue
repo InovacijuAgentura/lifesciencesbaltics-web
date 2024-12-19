@@ -18,7 +18,7 @@ div.modal
                 .memb(v-for="memb in data.members" :key="memb.id")
                     NuxtLink.link(v-if="memb.url" :to="memb.url")
                     .img(v-if="memb.image")
-                        wpImageSmall(:image="memb.image" :width="460" :height="516" :cover="true")
+                        wpImageSmall(:image="memb.image" :width="460" :height="516" :cover="true" alt="Image")
                     h3.t(v-html="memb.title")
                     .content(v-if="memb.content" v-html="memb.content")
 

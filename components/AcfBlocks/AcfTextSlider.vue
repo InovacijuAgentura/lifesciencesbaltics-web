@@ -19,9 +19,9 @@ div.text(:class="[padding_top, padding_bottom, layout_color]")
                   slider_next
       .right(v-if="image || video")
         .img(v-if="image && use_image")
-          wpImageSmall(:image="image" :width="1026" :height="1115"  :cover="true")
+          wpImageSmall(:image="image" :width="1026" :height="1115"  :cover="true" alt="Image")
         .video(v-if="video && !use_image")
-          video(preload="metadata" width="100%" autoplay muted loop)
+          video(preload="metadata" autoplay muted loop)
             source(:src="video.url" :type="video.mime_type")
 </template>
 

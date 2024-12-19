@@ -5,16 +5,16 @@
 		Loader(v-if="show")
 		div(v-else)
 			.img
-				wpImageSmall(v-if="image" :image="image" :height="724" :width="1286" :cover="true")
-				wpImageSmall(v-else :image="`https://img.youtube.com/vi/${id}/maxresdefault.jpg`" :height="724" :width="1286" :cover="true")
+				wpImageSmall(v-if="image" :image="image" :height="724" :width="1286" :cover="true" alt="Image")
+				wpImageSmall(v-else :image="`https://img.youtube.com/vi/${id}/maxresdefault.jpg`" :height="724" :width="1286" :cover="true" alt="Image")
 			.ic
 				play
 	.videowrap(v-else-if="type === 'file' && file" @click="showVideo")
-		video(v-if="show" preload="metadata" width="100%" controls autoplay)
+		video(v-if="show" preload="metadata" controls autoplay)
 			source(:src="file.url" :type="file.mime_type")
 		div(v-else)
 			.img(v-if="image")
-				wpImageSmall(:image="image" :height="724" :width="1286" :cover="true")
+				wpImageSmall(:image="image" :height="724" :width="1286" :cover="true" alt="Image")
 			.ic
 				play
 	Wyswyg(v-if="text" :html="text")

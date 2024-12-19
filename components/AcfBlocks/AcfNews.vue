@@ -4,7 +4,7 @@ div.news(v-if="items && items.length" :class="[padding_top, padding_bottom, layo
     .items
       NuxtLink.item(v-for="item in filteredNews" :to="item.url"  :key="item.id")
         .img(v-if="item.image")
-          wpImageSmall(:image="item.image" :width="634" :height="300"  :cover="true")
+          wpImageSmall(:image="item.image" :width="634" :height="300"  :cover="true" alt="Image")
         .wrap
           h3.t(v-html="item.title")
           .foot

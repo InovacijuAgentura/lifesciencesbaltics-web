@@ -9,7 +9,7 @@ div.tmpage
                     h3.sub(v-if="data.job_title" v-html="data.job_title")
                     Wyswyg(v-if="data.content" :html="data.content")
                 .img(v-if="data.image")
-                    wpImageSmall(:image="data.image" :width="690" :height="774" :cover="true")
+                    wpImageSmall(:image="data.image" :width="690" :height="774" :cover="true" alt="Image")
 </template>
 
 <script>

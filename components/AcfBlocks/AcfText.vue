@@ -1,10 +1,10 @@
 <template lang="pug">
 div.text(:class="[padding_top, padding_bottom, layout_color, {center:centered}]")
   .videowrap(v-if="video && background_type === 'video'")
-    video(preload="metadata" width="100%" autoplay muted loop)
+    video(preload="metadata" autoplay muted loop)
       source(:src="video.url" :type="video.mime_type")
   .bgimg(v-if="background_image && background_type === 'image'")
-    wpImageSmall(:image="background_image" :cover="true" :width="1920")
+    wpImageSmall(:image="background_image" :cover="true" :width="1920" alt="Image")
   div.container(v-if="title || text" :class="[container_size]")
     .grid(:class="{on:title_grid_left}")
       .twrap(v-if="title")

@@ -9,7 +9,7 @@ div.programs(:class="[padding_bottom, layout_color]")
           .cat(v-for="(stage, index) in stages" :class="{active: activeStage === stage.id }" @click="triggerStage(stage.id)" :key="stage.id")
             .name {{ stage.title }}
             .img(v-if="stage.image")
-              wpImageSmall(:image="stage.image" :width="100" :contain="true")
+              wpImageSmall(:image="stage.image" :width="100" :contain="true" alt="Image")
   .main
     .container
       .grid

@@ -9,7 +9,7 @@ div.items(:class="[padding_top, padding_bottom, layout_color]")
         .item
           NuxtLinkOrA(v-if="item.link" :url="item.link.url" :target="item.link.target")
           .img(v-if="item.image")
-            wpImageSmall(:image="item.image" :width="844" :height="400" :cover="true")
+            wpImageSmall(:image="item.image" :width="844" :height="400" :cover="true" alt="Image")
           h3.t(v-if="item.title" v-html="item.title")
 </template>
 

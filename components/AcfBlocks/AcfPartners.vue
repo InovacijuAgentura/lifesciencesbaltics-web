@@ -8,7 +8,7 @@ div.partners(:class="[padding_top, padding_bottom, layout_color]")
       revealBlock.item(v-for="(item,index) in partners" :key="item.id" v-if="item.image" :delay="index*0.1")
           a(v-if="item.website" :href="item.website" target="_blank")
           .img
-            wpImageSmall(:image="item.image[0]" :width="item.image[1]" :height="item.image[2]")
+            wpImageSmall(:image="item.image[0]" :width="item.image[1]" :height="item.image[2]" alt="Image")
 </template>
 
 <script>

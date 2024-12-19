@@ -12,7 +12,6 @@ div.image(:class="[padding_top, padding_bottom, layout_color, height]")
 
 <script>
 import Wyswyg from '@/components/Elements/Wyswyg.vue';
-import wpImageSmall from '@/components/Elements/wpImageSmall.vue';
 import Button from '@/components/Elements/Button.vue';
 
 export default {
@@ -21,7 +20,6 @@ export default {
   props: ['title','use_h1_title','image','height', 'fixed_image','button', 'text','layout_color','padding_top', 'padding_bottom', 'container_size'],
   components: {
     Wyswyg,
-    wpImageSmall,
     Button
   },
   data() {

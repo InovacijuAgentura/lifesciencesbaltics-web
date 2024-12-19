@@ -4,7 +4,7 @@ div.text(:class="[padding_top, padding_bottom, layout_color]")
     .grid(:class="{odd:image_on_left}")
       .left
         .img(v-if="image")
-          wpImageSmall(:image="image" :width="825" :height="900"  :cover="true")
+          wpImageSmall(:image="image" :width="825" :height="900"  :cover="true" alt="Image")
       .right
         .wrp
           h1.titleH(v-if="title && use_h1_title" v-html="title")

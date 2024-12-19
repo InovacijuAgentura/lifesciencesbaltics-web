@@ -12,7 +12,7 @@ div.text(:class="[padding_top, padding_bottom, layout_color]")
             Button(v-else :to="button.url" :href="button.url" :text="button.title" :target="button.target")
       .right
         .img(v-if="image")
-          wpImageSmall(:image="image" :width="825" :height="900"  :cover="true")
+          wpImageSmall(:image="image" :width="825" :height="900"  :cover="true" alt="Image")
 </template>
 
 <script>

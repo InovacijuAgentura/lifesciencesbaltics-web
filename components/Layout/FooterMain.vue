@@ -30,7 +30,6 @@ div.footer(v-if="options && menu")
 <script>
 import NuxtLinkOrA from '@/components/Elements/NuxtLinkOrA.vue';
 import SocialLinks from '@/components/Elements/SocialLinks.vue';
-import wpImageSmall from '@/components/Elements/wpImageSmall.vue';
 import Button from '@/components/Elements/Button.vue';
 import { mapGetters } from 'vuex';
 import logo_footer from '~/assets/svg/logo_footer_new.svg';
@@ -41,7 +40,6 @@ export default {
   components: {
     NuxtLinkOrA,
     SocialLinks,
-    wpImageSmall,
     Button,
     logo_footer
   },
