@@ -52,7 +52,6 @@ export default {
       {
         rel: 'preconnect',
         href: process.env.API_BASE_URL,
-        crossorigin: true,
       },
       {
         rel: 'preconnect',
@@ -67,21 +66,18 @@ export default {
         href: '/fonts/MyriadPro-Light.woff2',
         as: 'font',
         type: 'font/woff2',
-        crossorigin: true,
       },
       {
         rel: 'preload',
         href: '/fonts/MyriadPro-Regular.woff2',
         as: 'font',
         type: 'font/woff2',
-        crossorigin: true,
       },
       {
         rel: 'preload',
         href: '/fonts/MyriadPro-Bold.woff2',
         as: 'font',
         type: 'font/woff2',
-        crossorigin: true,
       },
     ]
   },

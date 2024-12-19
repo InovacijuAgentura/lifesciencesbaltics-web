@@ -1,5 +1,13 @@
 <template lang="pug">
-component(:is="nlinkOrA" tabindex="0" :to="to" :href="href" :target="targetBlank" :class="[color,size,textColor, {disabled:disabled},{loading:loading}]").btn       
+component(v-if="target === '_blank'" :is="nlinkOrA" tabindex="0" :href="href" :target="targetBlank" :class="[color,size,textColor, {disabled:disabled},{loading:loading}]").btn       
+    div.ico(v-if="$slots['left'] && !loading").leftico
+        slot(name="left")
+    div.text
+        div.t(:class="{hide:loading}") {{text}}
+        Loader(:color="color" v-if="loading")
+    div.ico(v-if="$slots['right'] && !loading").rightico
+        slot(name="right")
+component(v-else :is="nlinkOrA" tabindex="0" :to="to" :class="[color,size,textColor, {disabled:disabled},{loading:loading}]").btn       
     div.ico(v-if="$slots['left'] && !loading").leftico
         slot(name="left")
     div.text
