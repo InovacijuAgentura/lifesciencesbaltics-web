@@ -1,13 +1,13 @@
 <template lang="pug">
 figure.picture(:class="{cover:cover, contain:contain}")
   picture
-    source(type="image/webp" :data-srcset="max480.webp+' 1x, '+max480.webp2x+' 2x'" media="(max-width: 480px)")
-    source(type="image/webp" :data-srcset="max768.webp+' 1x, '+max768.webp2x+' 2x'" media="(max-width: 768px)")
-    source(type="image/webp" :data-srcset="max1200.webp+' 1x, '+max1200.webp2x+' 2x'" media="(max-width: 1200px)")
-    source(type="image/jpg" :data-srcset="max480.jpg+' 1x, '+max480.jpg2x+' 2x'" media="(max-width: 480px)")
-    source(type="image/jpg" :data-srcset="max768.jpg+' 1x, '+max768.jpg2x+' 2x'" media="(max-width: 768px)")
-    source(type="image/jpg" :data-srcset="max1200.jpg+' 1x, '+max1200.jpg2x+' 2x'" media="(max-width: 1200px)")
-    source(type="image/webp" :data-srcset="full.webp+' 1x, '+full.webp2x+' 2x'")
+    source(type="image/webp" :data-srcset="max480.webp+' 1x, '+max480.webp2x+' 2x'" :srcset="max480.webp+' 1x, '+max480.webp2x+' 2x'" media="(max-width: 480px)")
+    source(type="image/webp" :data-srcset="max768.webp+' 1x, '+max768.webp2x+' 2x'" :srcset="max768.webp+' 1x, '+max768.webp2x+' 2x'" media="(max-width: 768px)")
+    source(type="image/webp" :data-srcset="max1200.webp+' 1x, '+max1200.webp2x+' 2x'" :srcset="max1200.webp+' 1x, '+max1200.webp2x+' 2x'" media="(max-width: 1200px)")
+    source(type="image/jpg" :data-srcset="max480.jpg+' 1x, '+max480.jpg2x+' 2x'" :srcset="max480.jpg+' 1x, '+max480.jpg2x+' 2x'" media="(max-width: 480px)")
+    source(type="image/jpg" :data-srcset="max768.jpg+' 1x, '+max768.jpg2x+' 2x'" :srcset="max768.jpg+' 1x, '+max768.jpg2x+' 2x'" media="(max-width: 768px)")
+    source(type="image/jpg" :data-srcset="max1200.jpg+' 1x, '+max1200.jpg2x+' 2x'" :srcset="max1200.jpg+' 1x, '+max1200.jpg2x+' 2x'" media="(max-width: 1200px)")
+    source(type="image/webp" :data-srcset="full.webp+' 1x, '+full.webp2x+' 2x'" :srcset="full.webp+' 1x, '+full.webp2x+' 2x'")
     img(:src="placeholder" :data-srcset="full.jpg+' 1x, '+full.jpg2x+' 2x'" :height="height" :width="width" :alt="alt").lazyload
 </template>
 

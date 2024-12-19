@@ -1,7 +1,7 @@
 <template lang="pug">
 figure.picture(:class="{cover:cover, contain:contain}")
   picture
-    source(type="image/webp" :data-srcset="full.webp+' 1x, '+full.webp2x+' 2x'")
+    source(type="image/webp" :data-srcset="full.webp+' 1x, '+full.webp2x+' 2x'" :srcset="full.webp+' 1x, '+full.webp2x+' 2x'")
     img(:src="placeholder" :data-srcset="full.jpg2x+' 1x, '+full.jpg2x+' 2x'" :height="height" :width="width" :alt="alt").lazyload
 </template>
 
