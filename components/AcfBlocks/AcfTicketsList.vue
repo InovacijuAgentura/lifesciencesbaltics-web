@@ -95,6 +95,7 @@ export default {
 .items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0 -15px -30px;
 
   > * {
