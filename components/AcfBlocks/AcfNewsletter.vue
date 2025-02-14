@@ -54,9 +54,19 @@ export default {
   },
   created() {
   },
+  async mounted() {
+    try {
+      await this.$recaptcha.init()
+    } catch (e) {
+      console.log(e);
+    }
+  },
+  beforeDestroy() {
+    this.$recaptcha.destroy()
+  },
   methods: {
 
-    submit() {
+    async submit() {
 
       this.end = '';
       this.termsError = false;
@@ -73,20 +83,28 @@ export default {
       }
 
       if(valid) {
-          this.btnload = true;
-          this.$axios.post(`wp-json/data/v1/newsletter_form/`, {email: this.email}).then((rsp) => {
-              this.btnload = false;
-              if (rsp.data.status === true) {
-                  this.email = '';
-                  this.terms = false
-                  this.end = '<span class="scc">'+this.$t('emailsend')+'</span>';
-              } else {
-                  this.end = '<span class="err">'+this.$t('emailretry')+'</span>';
-              }
-          }).catch((error) => {
-              this.end = '<span class="err">'+this.$t('emailretry')+'</span>';
-              this.btnload = false;
-          });  
+
+          try {
+            const token = await this.$recaptcha.execute('login')
+
+            this.btnload = true;
+            this.$axios.post(`wp-json/data/v1/newsletter_form/`, {email: this.email, token:token}).then((rsp) => {
+              console.log(rsp)
+                this.btnload = false;
+                if (rsp.data.status === true) {
+                    this.email = '';
+                    this.terms = false
+                    this.end = '<span class="scc">'+this.$t('emailsend')+'</span>';
+                } else {
+                    this.end = '<span class="err">'+this.$t('emailretry')+'</span>';
+                }
+            }).catch((error) => {
+                this.end = '<span class="err">'+this.$t('emailretry')+'</span>';
+                this.btnload = false;
+            });
+          } catch (error) {
+            console.log('Login error:', error)
+          }
         }
       }
   },

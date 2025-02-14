@@ -13,6 +13,7 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
+import nuxt_plugin_recaptcha_faba8b9a from 'nuxt_plugin_recaptcha_faba8b9a' // Source: ./recaptcha.js (mode: 'all')
 import nuxt_plugin_gtm_6344159a from 'nuxt_plugin_gtm_6344159a' // Source: ./gtm.js (mode: 'all')
 import nuxt_plugin_pluginutils_6246fe12 from 'nuxt_plugin_pluginutils_6246fe12' // Source: ./nuxt-i18n/plugin.utils.js (mode: 'all')
 import nuxt_plugin_pluginrouting_3fc0ac82 from 'nuxt_plugin_pluginrouting_3fc0ac82' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
@@ -92,7 +93,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Life Sciences Baltics","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"script":[{"src":"\u002F\u002Fcdn.cookie-script.com\u002Fs\u002F5d2b550add97f206d518d4dd01f86755.js"}],"link":[{"rel":"preconnect","href":"https:\u002F\u002Fweb.lifesciencesbaltics.com"},{"rel":"preconnect","href":"https:\u002F\u002Ffonts.googleapis.com"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"},{"rel":"preload","href":"\u002Ffonts\u002FMyriadPro-Light.woff2","as":"font","type":"font\u002Fwoff2"},{"rel":"preload","href":"\u002Ffonts\u002FMyriadPro-Regular.woff2","as":"font","type":"font\u002Fwoff2"},{"rel":"preload","href":"\u002Ffonts\u002FMyriadPro-Bold.woff2","as":"font","type":"font\u002Fwoff2"}],"style":[]},
+    head: {"title":"Life Sciences Baltics","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"script":[{"src":"\u002F\u002Fcdn.cookie-script.com\u002Fs\u002F5d2b550add97f206d518d4dd01f86755.js"}],"link":[{"rel":"preconnect","href":"https:\u002F\u002Fweb-test.lifesciencesbaltics.com"},{"rel":"preconnect","href":"https:\u002F\u002Ffonts.googleapis.com"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"},{"rel":"preload","href":"\u002Ffonts\u002FMyriadPro-Light.woff2","as":"font","type":"font\u002Fwoff2"},{"rel":"preload","href":"\u002Ffonts\u002FMyriadPro-Regular.woff2","as":"font","type":"font\u002Fwoff2"},{"rel":"preload","href":"\u002Ffonts\u002FMyriadPro-Bold.woff2","as":"font","type":"font\u002Fwoff2"}],"style":[]},
 
     store,
     router,
@@ -223,6 +224,10 @@ async function createApp(ssrContext, config = {}) {
     }
   }
   // Plugin execution
+
+  if (typeof nuxt_plugin_recaptcha_faba8b9a === 'function') {
+    await nuxt_plugin_recaptcha_faba8b9a(app.context, inject)
+  }
 
   if (typeof nuxt_plugin_gtm_6344159a === 'function') {
     await nuxt_plugin_gtm_6344159a(app.context, inject)

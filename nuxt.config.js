@@ -114,7 +114,13 @@ export default {
     'nuxt-mq',
     '@nuxtjs/i18n',
     '@nuxtjs/gtm',
-  ],
+    '@nuxtjs/recaptcha',
+  ], 
+  recaptcha: {
+    hideBadge: false,
+    siteKey: '6LfnPtYqAAAAACjy1hdeCL7H8boe_96qqupuFpvz',
+    version: 3
+  },
   mq: {
     defaultBreakpoint: 'lg',
     breakpoints: {
