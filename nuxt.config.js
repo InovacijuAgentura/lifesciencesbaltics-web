@@ -117,7 +117,7 @@ export default {
     '@nuxtjs/recaptcha',
   ], 
   recaptcha: {
-    hideBadge: false,
+    hideBadge: true,
     siteKey: '6LfnPtYqAAAAACjy1hdeCL7H8boe_96qqupuFpvz',
     version: 3
   },

@@ -181,7 +181,7 @@ class ReCaptcha {
 export default function (_, inject) {
   const { recaptcha = {} } = _.$config || {}
   const options = {
-    ...{"hideBadge":false,"siteKey":"6LfnPtYqAAAAACjy1hdeCL7H8boe_96qqupuFpvz","version":3},
+    ...{"hideBadge":true,"siteKey":"6LfnPtYqAAAAACjy1hdeCL7H8boe_96qqupuFpvz","version":3},
     ...recaptcha,
   }
 

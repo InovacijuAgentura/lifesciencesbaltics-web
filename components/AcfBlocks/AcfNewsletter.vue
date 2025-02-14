@@ -86,10 +86,8 @@ export default {
 
           try {
             const token = await this.$recaptcha.execute('login')
-
             this.btnload = true;
             this.$axios.post(`wp-json/data/v1/newsletter_form/`, {email: this.email, token:token}).then((rsp) => {
-              console.log(rsp)
                 this.btnload = false;
                 if (rsp.data.status === true) {
                     this.email = '';
