@@ -3,24 +3,28 @@
     "name": "index___en",
     "path": "/",
     "component": "/Users/ignas/Sites/lsb/lifesciencesbaltics-web/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_6bc99a9a"
   },
   {
     "name": "new-slug___en",
     "path": "/new/:slug?",
     "component": "/Users/ignas/Sites/lsb/lifesciencesbaltics-web/pages/new/_slug.vue",
-    "chunkName": "pages/new/_slug"
+    "chunkName": "pages/new/_slug",
+    "_name": "_3ee947a3"
   },
   {
     "name": "team-member-slug___en",
     "path": "/team-member/:slug?",
     "component": "/Users/ignas/Sites/lsb/lifesciencesbaltics-web/pages/team-member/_slug.vue",
-    "chunkName": "pages/team-member/_slug"
+    "chunkName": "pages/team-member/_slug",
+    "_name": "_fbe29ce6"
   },
   {
     "name": "all___en",
     "path": "/*",
     "component": "/Users/ignas/Sites/lsb/lifesciencesbaltics-web/pages/_.vue",
-    "chunkName": "pages/_"
+    "chunkName": "pages/_",
+    "_name": "_a59d08b2"
   }
 ]
