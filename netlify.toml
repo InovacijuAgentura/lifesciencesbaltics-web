@@ -3,7 +3,7 @@
 [[plugins]]
 package = "@netlify/plugin-sitemap"
   [plugins.inputs]
-  baseUrl = "https://lifesciencesbaltics-web.netlify.app"
+  baseUrl = "https://lifesciencesbaltics.com"
   trailingSlash = true
   exclude = [
   	'./404',
