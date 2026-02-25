@@ -19,7 +19,7 @@ const imageOptions = {
   "provider": "static",
   "domains": [
     "localhost",
-    "web-test.lifesciencesbaltics.com",
+    "web.lifesciencesbaltics.com",
     "img.youtube.com"
   ],
   "alias": {}
