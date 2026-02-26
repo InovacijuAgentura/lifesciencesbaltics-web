@@ -46,7 +46,7 @@ div.header(:class="[{min:min}, headerStyle]")
 
 
 import { mapGetters } from 'vuex';
-import logoICO from '~/assets/svg/logonew.svg';
+import logoICO from '~/assets/svg/logo.svg';
 import ticket from '~/assets/svg/ticket.svg';
 import Button from '@/components/Elements/Button.vue';
 import NuxtLinkOrA from '@/components/Elements/NuxtLinkOrA.vue';
